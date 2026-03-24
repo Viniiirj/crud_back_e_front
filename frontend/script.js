@@ -13,7 +13,7 @@ const tabela = document.getElementById("tabela");
 
 let idEditando = null;
 
-const API = "http://localhost:3000";
+const API = "https://crudbackefront-production.up.railway.app";
 
 async function buscarPessoas() {
     const res = await fetch(`${API}/pessoas`);
