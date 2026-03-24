@@ -1,9 +1,10 @@
-import sqlite3 from 'sqlite3'
-import { open } from 'sqlite'
+import Database from 'better-sqlite3'
 
-export async function openDb() {
-    return open({
-        filename: "database.db",
-        driver: sqlite3.Database
-    })
+let db
+
+export function openDb() {
+    if (!db) {
+        db = new Database('database.db')
+    }
+    return db
 }
