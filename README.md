@@ -7,7 +7,7 @@ Aplicação fullstack para gerenciamento de pessoas, com operações de cadastro
 **Backend**
 - Node.js
 - Express
-- SQLite
+- better-sqlite3
 
 **Frontend**
 - HTML
@@ -26,11 +26,14 @@ npm install
 npm run dev
 ```
 
-O servidor vai rodar em `http://localhost:3000`
+**Deploy**
+- Backend: Railway
+- Frontend: Vercelor.
 
-### Frontend
+## Acesso
 
-Abra o arquivo `frontend/index.html` diretamente no navegador.
+- Frontend: https://crud-back-e-front.vercel.app
+- API: https://crudbackefront-production.up.railway.app
 
 ## Endpoints da API
 
