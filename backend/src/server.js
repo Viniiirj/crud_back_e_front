@@ -8,8 +8,17 @@ app.use(cors())
 app.use(express.json())
 app.use(router)
 
-criarTabela()
+const PORT = process.env.PORT || 3000
 
-app.listen(process.env.PORT || 3000, () => {
-    console.log("Server rodando")
-})
+async function startServer() {
+    try {
+        await criarTabela()
+        app.listen(PORT, () => {
+            console.log(`Server rodando na porta ${PORT}`)
+        })
+    } catch (error) {
+        console.error('Erro ao iniciar servidor:', error)
+    }
+}
+
+startServer()
